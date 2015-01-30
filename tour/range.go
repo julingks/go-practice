@@ -12,4 +12,13 @@ func main() {
 	for i := range make([]int, 10) {
 		fmt.Println(i)
 	}
+
+	m := make(map[int]string)
+
+	m[1] = "value1"
+	m[2] = "value2"
+
+	for k, v := range m {
+		fmt.Println(k, v)
+	}
 }

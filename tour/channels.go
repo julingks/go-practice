@@ -1,6 +1,7 @@
 package main
 
 import "fmt"
+import "time"
 
 func sum(a []int, c chan int) {
 	sum := 0
@@ -18,6 +19,5 @@ func main() {
 	go sum(a[len(a)/2:], c)
 
 	x, y := <-c, <-c // c로부터 받는다.
-
 	fmt.Println(x, y, x+y)
 }
