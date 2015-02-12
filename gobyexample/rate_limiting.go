@@ -4,13 +4,14 @@ import "time"
 import "fmt"
 
 func main() {
+	fmt.Println("start!")
 	requests := make(chan int, 5)
 	for i := 1; i <= 5; i++ {
 		requests <- i
 	}
 	close(requests)
 
-	limiter := time.Tick(time.Millisecond * 200)
+	limiter := time.Tick(time.Millisecond * 2000)
 
 	for req := range requests {
 		<-limiter
@@ -24,9 +25,18 @@ func main() {
 	}
 
 	go func() {
-		for t := range time.Tick(time.Millisecond * 200) {
+		for t := range time.Tick(time.Millisecond * 2000) {
 			burstyLimiter <- t
 		}
 	}()
 
+	burstyRequests := make(chan int, 5)
+	for i := 1; i <= 5; i++ {
+		burstyRequests <- i
+	}
+	close(burstyRequests)
+	for req := range burstyRequests {
+		<-burstyLimiter
+		fmt.Println("request", req, time.Now())
+	}
 }
