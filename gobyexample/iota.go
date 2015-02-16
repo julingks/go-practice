@@ -4,6 +4,10 @@ import "fmt"
 
 type ByteSize float64
 
+/*
+	iota는상수의enumerator 이다. 0 부터 시작한다.
+*/
+
 const (
 	_           = iota // ignore first value by assigning to blank identifier
 	KB ByteSize = 1 << (10 * iota)
