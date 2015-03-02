@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/couchbaselabs/go-couchbase"
 	"log"
+
+	"github.com/couchbaselabs/go-couchbase"
 )
 
 func mf(err error, msg string) {
@@ -22,7 +23,7 @@ func main() {
 	p, err := c.GetPool("default")
 	mf(err, "pool")
 
-	b, err := p.GetBucketWithAuth("cookierun", "cookierun", "test1111")
+	b, err := p.GetBucketWithAuth("bucketname", "bucketname", "pw")
 
 	mf(err, "bucket")
 

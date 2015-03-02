@@ -2,17 +2,18 @@ package main
 
 import (
 	"flag"
-	"github.com/couchbase/cbauth"
-	"github.com/couchbaselabs/go-couchbase"
 	"log"
 	"net/url"
+
+	"github.com/couchbase/cbauth"
+	"github.com/couchbaselabs/go-couchbase"
 )
 
 var serverURL = flag.String("serverURL", "http://localhost:8091", "couchbase server URL")
 var poolName = flag.String("poolName", "default", "pool name")
-var bucketName = flag.String("bucketName", "cookierun", "bucket name")
-var authUser = flag.String("authUser", "cookierun", "auth user name (probably same as bucketName)")
-var authPaswd = flag.String("authPswd", "test1111", "auth password")
+var bucketName = flag.String("bucketName", "bucket", "bucket name")
+var authUser = flag.String("authUser", "bucket", "auth user name (probably same as bucketName)")
+var authPaswd = flag.String("authPswd", "password", "auth password")
 
 func main() {
 	flag.Parse()
