@@ -1,6 +1,7 @@
 # Go-practice
 
 ## go tuor
+* http://go-tour-kr.appspot.com/#1 (KOREAN)
 
 ## go by example
 
