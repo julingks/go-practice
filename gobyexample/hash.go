@@ -5,6 +5,7 @@ import (
 	"hash/adler32"
 	"hash/crc32"
 	"hash/crc64"
+	"strconv"
 )
 
 func main() {
@@ -23,5 +24,6 @@ func main() {
 	fmt.Printf("crc32 : %x\n", crc32v)
 	fmt.Printf("alder32 : %x\n", adler32v)
 	fmt.Printf("crc64 checksum : %x\n", checksum64)
-
+	fmt.Printf("crc64 checksum : %v\n", string(checksum64))
+	fmt.Printf("%s\n", strconv.FormatUint(checksum64, 10))
 }
