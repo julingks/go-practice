@@ -1,29 +1,31 @@
-# Go-practice
+# Go Practice
 
-## Go tuor
-* http://go-tour-kr.appspot.com/#1 (KOREAN)
+This is for traning go language
+
+## Go Tuor
+* [http://go-tour-kr.appspot.com/#1](http://go-tour-kr.appspot.com/#1)  (KOREAN)
 
 ## Go by example
 
-* https://gobyexample.com/
+* [https://gobyexample.com/](https://gobyexample.com/)
 
-## go-couchbase
+## Go-couchbase
 
-* https://github.com/couchbase/go-couchbase
+* [https://github.com/couchbase/go-couchbase](https://github.com/couchbase/go-couchbase)
 
-## Golang exmaples 
+## Golang Exmaples 
 
-* http://golang-examples.tumblr.com/
+* [http://golang-examples.tumblr.com/](http://golang-examples.tumblr.com/)
 
-## Go language patterns
+## Go Language Patterns
 
-* http://www.golangpatterns.info/
+* [http://www.golangpatterns.info/](http://www.golangpatterns.info/)
 
-## Golang tutorial 
+## Golang Tutorial 
 
-* https://github.com/julingks/go-practice
+* [https://github.com/julingks/go-practice](https://github.com/julingks/go-practice)
 
-## Network programming with Go
-* http://jan.newmarch.name/go/
+## Network Programming with Go
+* [http://jan.newmarch.name/go/](http://jan.newmarch.name/go/)
 
 
