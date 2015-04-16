@@ -9,5 +9,5 @@ func main() {
 	h := sha1.New()
 	h.Write([]byte("test"))
 	bs := h.Sum([]byte{})
-	fmt.Println(bs)
+	fmt.Println(fmt.Sprintf("%x", bs))
 }
