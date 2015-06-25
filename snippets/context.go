@@ -8,17 +8,19 @@ import (
 )
 
 const (
-	timeout = time.Millisecond * 100
+	timeout = time.Second * 10
 )
 
 func main() {
 	ctx, cancel := context.WithTimeout(context.Background(), timeout)
+	ctx = context.WithValue(ctx, "key", "value")
 
+	cancel()
 	select {
-	case <-time.After(200 * time.Millisecond):
+	case <-time.After(20 * time.Second):
 		fmt.Println("overslept")
 	case <-ctx.Done():
 		fmt.Println(ctx.Err()) // prints "context deadline exceeded"
 	}
-	defer cancel()
+	fmt.Println(ctx.Value("key").(string))
 }
